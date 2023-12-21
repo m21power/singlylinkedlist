@@ -61,6 +61,15 @@ class LinkedList:
             prev=iter
             iter=iter.next
         print("Oops! There is no such element in the list! ")
+    def reversing(self):
+        iter=self.head
+        prev=None
+        while iter:
+            n=iter.next
+            iter.next=prev
+            prev=iter
+            iter=n
+        self.head=prev
     def printing(self):
         cur=self.head
         while cur:
